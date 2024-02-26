@@ -1,1 +1,1 @@
-*.psd filter=lfs diff=lfs merge=lfs -text
+BD.bin filter=lfs diff=lfs merge=lfs -text
