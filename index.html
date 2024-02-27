@@ -5,10 +5,8 @@
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-    <script
-        src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
-    <script
-        src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
 </head>
 
 <body style="margin: 0; overflow: hidden;">
@@ -20,11 +18,12 @@
 
         <a-marker id="animated-marker" type="pattern" preset="custom" url="assets/marker.patt"
             raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;" id="markerA">
-            <a-entity id="bowser-model" scale="0.1 0.1 0.1" animation-mixer="loop: repeat" gltf-model="#animated-asset"
-                class="clickable" gesture-handler></a-entity>
+            <a-entity id="bowser-model" scale="0.1 0.1 0.1" gltf-model="#animated-asset"
+                class="clickable"></a-entity>
+                <e-entity></e-entity>
         </a-marker>
 
-        <a-entity camera position="0.372 7.5 -1.379" rotation="-90 0 180"></a-entity>
+        <a-entity camera look-contros-enabled='true' position="0.372 7.5 -1.379" rotation="-90 0 180"></a-entity>
         <!-- <a-camera id='camera1' look-contros-enabled='false' arjs-device-orientation-controls='smoothingFactor: 0.1' gps-new-camera='gpsMinDistance: 25'> </a-camera> -->
     </a-scene>
 </body>
